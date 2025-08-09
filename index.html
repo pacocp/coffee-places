@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Recommended Cafeterias (OSM Edition)</title>
+    
+    <link rel="stylesheet" href="leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <aside class="sidebar">
+            <header>
+                <h1>My Cafeteria Picks</h1>
+                <p>Curated coffee spots that I personally recommend.</p>
+            </header>
+            <ul id="cafe-list" class="cafe-list">
+                </ul>
+        </aside>
+
+        <main class="map-container">
+            <div id="map"></div>
+        </main>
+    </div>
+
+    <div id="cafe-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="modal-close-btn" class="modal-close-btn">&times;</button>
+            <img id="modal-img" src="" alt="Cafe Image">
+            <div class="modal-info">
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <a id="modal-gmaps-link" href="#" target="_blank" rel="noopener noreferrer" class="modal-button">
+                    View on Google Maps
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="leaflet.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

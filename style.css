@@ -1,0 +1,278 @@
+/* --- Global Styles & Fonts --- */
+:root {
+    --primary-color: #6A4C3C; /* A warm coffee brown */
+    --secondary-color: #F7F5F3; /* Light cream */
+    --text-color: #333;
+    --accent-color: #A37E6B;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden; /* Prevent body scrolling */
+}
+
+/* --- Main Layout --- */
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    width: 380px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e0e0e0;
+    z-index: 1000; /* Ensure sidebar is above map */
+}
+
+.sidebar header {
+    padding: 24px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.sidebar p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.cafe-list {
+    list-style-type: none;
+    overflow-y: auto; /* Makes the list scrollable */
+    flex-grow: 1; /* Allows the list to fill available space */
+}
+
+.map-container {
+    flex-grow: 1; /* Takes up the remaining space */
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Cafeteria List Item Styling --- */
+.cafe-item {
+    display: flex;
+    padding: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cafe-item:hover {
+    background-color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+.cafe-item.active {
+    background-color: #e8f0fe; /* A light blue to indicate selection */
+    border-left: 4px solid var(--primary-color);
+    padding-left: 12px;
+}
+
+.cafe-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 16px;
+    background-color: #eee; /* Placeholder color */
+}
+
+.cafe-info h3 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.cafe-info p {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* --- Leaflet Popup Styling --- */
+.leaflet-popup-content-wrapper {
+    border-radius: 8px !important;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+.leaflet-popup-content h3 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+    body {
+        overflow: auto; /* Allow scrolling on mobile */
+    }
+    
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 50vh; /* Sidebar takes half the viewport height */
+        border-right: none;
+    }
+
+    .map-container {
+        width: 100%;
+        height: 50vh; /* Map takes the other half */
+    }
+}
+
+/* --- Custom Marker Icon Styling --- */
+.custom-cafe-icon {
+    background-color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%; /* Makes it a circle */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+/* Style for the SVG icon inside the marker */
+.custom-cafe-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: #ffffff; /* White coffee cup */
+}
+
+/* Style for the 'active' marker */
+.custom-cafe-icon.active {
+    background-color: #d62828; /* A standout red color */
+    transform: scale(1.2); /* Make the active icon bigger */
+}
+
+/* --- Popup Link Styling --- */
+.leaflet-popup-content a {
+    display: block;
+    margin-top: 8px;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.leaflet-popup-content a:hover {
+    text-decoration: underline;
+}
+
+/* --- Modal Window Styling --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    overflow: hidden;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-content img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.modal-info {
+    padding: 24px 32px 32px;
+    text-align: center;
+}
+
+.modal-info h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 0 0 16px;
+}
+
+.modal-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 24px;
+}
+
+.modal-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
