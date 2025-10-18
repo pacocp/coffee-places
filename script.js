@@ -20,7 +20,7 @@ const cafeterias = [
         id: 'sur-coffee-corner',
         name: 'Sur Coffee Corner',
         location: [37.177239416577606, -3.599935246891415],
-        description: 'Their coffee is great, and their toasts are amazing (and big!). Only to go.',
+        description: 'Their coffee is great, and their sandwiches are amazing (and big!). They work with Nomad roasters. Only to go.',
         imageUrl: 'https://lh3.googleusercontent.com/p/AF1QipOFH0YbzW-nfE1mRAlF3OcuRFngzd-y9KGbu8jQ=w408-h544-k-no',
         link: 'https://www.google.com/maps/place/SUR+Coffee+Corner/@37.1762041,-3.6026989,17z/data=!4m6!3m5!1s0xd71fdbcc76e5563:0x232f63d5c134cf4c!8m2!3d37.177043!4d-3.5999138!16s%2Fg%2F11fn1x0vqq!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D'
     },
