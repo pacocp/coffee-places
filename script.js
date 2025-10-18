@@ -5,7 +5,7 @@ const cafeterias = [
         name: 'Dulcimena Coffee & Go',
         location: [37.17283773878462, -3.59251301403811],
         description: 'One of (or THE) the best coffee places in Granada, and the most purist one. You should try everything there. They work mainly with Ineffable roasters.',
-        imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrtX53bCB1_8NvhSznVoJPXkB4ayaIK2rWFmrbvcmlEoinoeMP_GAdl4XSwbjb3ReFwcnXGivCFmpIV8wbn5Apa5UkG8oLTzPkUZ5YJLAq7VTQOBgqeozQL8yAr99DGTvHBvmg=w408-h541-k-no',
+        imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqsVqOzrgcq1Wn92bloqdeyWC_M_hvsiMYdxeebuz-ReQd71Oi57jaFRiXbDGKJlXaefKhEEG9PkKs8zuL9ZyHA3YHXMMhpGbXGYSJ7hhFeml-YXB_Uj8Th1UX7QREaXBu4SS4=w408-h544-k-no',
         link: 'https://www.google.com/maps/place/Dulcimena+Coffee+%26+Go/@37.1727865,-3.595045,16z/data=!3m1!4b1!4m6!3m5!1s0xd71fcba19b7d6f1:0x84d53432d8525722!8m2!3d37.1727865!4d-3.5924701!16s%2Fg%2F11b75pwlkt!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D'
     },
     {
@@ -29,7 +29,7 @@ const cafeterias = [
         name: 'La Finca',
         location: [37.176349422608446, -3.6001240055342785],
         description: 'One of the most visited specialty coffee spots in Granada, next to the Cathedral. They have a wide variety of food, and they are also the roasters.',
-        imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqVSIZqxbcY-O2Ecl6e6vPirwd29wnK6CuSj9Std78E84MdwujARI65qMoAqN5GNqaqffBkOgKjzfjQMzozEQcYtf31rZgTqn7XNMS1rHmaJIU29Lk1-JGC3mmAsZ--OajP9VXfQW1eI1QP=w397-h298-k-no',
+        imageUrl: 'https://lh3.googleusercontent.com/geougc-cs/AB3l90B4ZwDELWuwVa0lIPjuxtYZ1qucXfJaeAzL8raAYXlRtjbblOaF_trROtGGhnsQAuUFst1ZtT-4EJyMzgSR2ET1wLk-LQj_rLEimY_BTJ_Dkle-DdvUB4DlTIx-BAF_wIhfKXZ7=w600-h900-p',
         link: 'https://www.google.com/maps/place/La+Finca+Coffee/@37.1740832,-3.5976356,16z/data=!4m6!3m5!1s0xd71fcbfb6842373:0xe7b93068dda77f7f!8m2!3d37.1762041!4d-3.600124!16s%2Fg%2F11bwyxj83p!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D'
     },
     {
