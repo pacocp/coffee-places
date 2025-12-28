@@ -56,6 +56,14 @@ const cafeterias = [
         imageUrl: 'https://lh3.googleusercontent.com/p/AF1QipPijN4-nGEMgaVN8z5akWB6vHK_QsUZODOJsqk=w408-h306-k-no',
         link: 'https://www.google.com/maps/place/Despiertoo+Specialty+Coffee/@37.1755538,-3.6039146,17z/data=!3m1!4b1!4m6!3m5!1s0xd71fd03de6c6ec5:0x6e5cb29004aa0c3c!8m2!3d37.1755538!4d-3.6013397!16s%2Fg%2F11t0mgnpqv!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D'
     },
+     {
+        id: 'seda-coffee',
+        name: 'Seda Coffee',
+        location: [37.17614868073314, -3.599893372962768],
+        description: 'Small coffee place next to the Cathedral. Good quality and a lot of coffee-related items to buy.',
+        imageUrl: 'https://lh3.googleusercontent.com/p/AF1QipNxvYcPSSivFHb5NQfuOl9Gb5DpMxZPQ7Hcq2IV=w408-h544-k-no',
+        link: 'https://maps.app.goo.gl/pFDerPQdqSbfp6pt6'
+    },
 ];
 
 // --- 2. GLOBAL VARIABLES ---
